@@ -69,15 +69,14 @@
 				var timerID = setInterval(function() {
    
 				   $.ajax({
-				       type: "GET",
-				           url: 'http://api.giphy.com/v1/gifs/search',
-
-				       dataType: "jsonp",
 				       data: {
 				           api_key : "dc6zaTOxFJmzC",
 									 q : "foxadhd",
 				           jsonp : "myJsonpCallback"
-				       }
+								 },
+				       type: "GET",
+				           url: 'http://api.giphy.com/v1/gifs/search',
+				       dataType: "jsonp"
 				   });
 
 				}, 3 * 1000);
