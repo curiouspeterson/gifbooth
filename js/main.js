@@ -4,7 +4,7 @@ $(document).ready(function() {
 		var numNew = 0;
 		console.log(data);
 		var gifResults = data.pagination.count;
-		console.log(data.data[0]);
+		console.log(data.data);
 		
 		
 
