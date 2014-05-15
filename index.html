@@ -73,9 +73,15 @@
 				           url: 'http://api.giphy.com/v1/gifs/search',
 
 				       dataType: "jsonp",
-				       data: 'search?q=foxadhd&api_key=dc6zaTOxFJmzC&jsonp=myJsonpCallback'
+				       data: '?q=foxadhd&api_key=dc6zaTOxFJmzC',
+							 success : function (data) {
+								 console.log(data);
+							 }
+							 
 				   });
 
+
+					 
 
 				</script>
 				
