@@ -1,79 +1,1356 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Gifbooth : " />
+<!--
+=======================================================================
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    Rossen Theme (theme garden) | 2013 
 
-    <title>Gifbooth</title>
-  </head>
+    Designed and developed by Jen Yuan
 
-  <body>
+    Download: http://themes.thejenyuan.com
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/curiouspeterson/gifbooth">View on GitHub</a>
+=======================================================================
 
-          <h1 id="project_title">Gifbooth</h1>
-          <h2 id="project_tagline"></h2>
+    Change Log:
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/curiouspeterson/gifbooth/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/curiouspeterson/gifbooth/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
+    11/21/13    Finish
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+-->
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<head>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<title>{Title}{block:PostSummary} - {PostSummary}{/block:PostSummary}</title>
 
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
+<link rel="shortcut icon" href="{favicon}">
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<meta name="viewport" content="width=device-width,user-scalable=false">
 
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+<meta name="image:Background" content=""/>
+<meta name="image:Sidebar Portrait" content=""/>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<meta name="color:Background" content="#f4f4f4"/>
+<meta name="color:Body Text" content="#777777"/>
+<meta name="color:Links" content="#12ad9e"/>
+<meta name="color:Links Hover" content="#06e8d2"/>
+<meta name="color:Sidebar" content="#111111"/>
+<meta name="color:Sidebar Divider" content="#2c2c2c"/>
+<meta name="color:Sidebar Text" content="#cccccc"/>
+<meta name="color:Sidebar Title" content="#ffffff"/>
+<meta name="color:Sidebar Links" content="#dddddd"/>
+<meta name="color:Top Bar" content="#ffffff"/>
+<meta name="color:Top Bar Text" content="#555555"/>
+<meta name="color:Photo Overlay" content="#000000"/>
+<meta name="color:Post Background" content="#ffffff"/>
+<meta name="color:Post Divider" content="#dddddd"/>
 
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+<meta name="if:Infinite Scrolling" contet="1"/>
+<meta name="if:Infinite Scrolling Animated" content="0"/>
+<meta name="if:Photo Border" content="1"/>
+<meta name="if:Photo Captions" content="0"/>
+<meta name="if:Post Rounded" content="0"/>
+<meta name="if:Repeat Background" content="1"/>
+<meta name="if:Show Archive Link" content="1"/>
+<meta name="if:Show Extra Link" content="0"/>
+<meta name="if:Show Random Link" content="1"/>
+<meta name="if:Show RSS Link" content="1"/>
+<meta name="if:Show Social Block" content="0"/>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<meta name="select:Title Font" content="Source Sans Pro" title="Sans Pro"/><meta name="select:Title Font" content="Arial" title="Arial"/><meta name="select:Title Font" content="Abel" title="Abel"/><meta name="select:Title Font" content="courier new" title="Courier"/><meta name="select:Title Font" content="Droid Sans" title="Droid Sans"/><meta name="select:Title Font" content="helvetica" title="Helvetica"/><meta name="select:Title Font" content="Karla" Title="Karla"/><meta name="select:Title Font" content="Mako" title="Mako"/><meta name="select:Title Font" content="Montserrat" title="Montserrat"/><meta name="select:Title Font" content="Noto Sans" title="Noto Sans"/><meta name="select:Title Font" content="PT Mono" title="PT Mono"/><meta name="select:Title Font" content="Raleway" title="Raleway"/><meta name="select:Title Font" content="Roboto Slab" title="Roboto Slab"/><meta name="select:Title Font" content="Ropa Sans" title="Ropa Sans"/><meta name="select:Title Font" content="Rokkitt" title="Rokkitt"/><meta name="select:Title Font" content="Times New Roman" title="Times New Roman"/><meta name="select:Body Font" content="Source Sans Pro" title="Sans Pro"/><meta name="select:Body Font" content="Abel" title="Abel"/><meta name="select:Body Font" content="Arial" title="Arial"/><meta name="select:Body Font" content="courier new" title="Courier"/><meta name="select:Body Font" content="Droid Sans" title="Droid Sans"/><meta name="select:Body Font" content="helvetica" title="Helvetica"/><meta name="select:Body Font" content="Karla" Title="Karla"/><meta name="select:Body Font" content="Mako" title="Mako"/><meta name="select:Body Font" content="Noto Sans" title="Noto Sans"/><meta name="select:Body Font" content="PT Mono" title="PT Mono"/><meta name="select:Body Font" content="Raleway" title="Raleway"/><meta name="select:Body Font" content="Roboto Slab" title="Roboto Slab"/><meta name="select:Body Font" content="Rokkitt" title="Rokkitt"/><meta name="select:Body Font" content="Ropa Sans" title="Ropa Sans"/><meta name="select:Body Font" content="Times New Roman" title="Times New Roman"/><meta name="select:Instagram Feed Count" content="instagram-count-6" Title="6"/><meta name="select:Instagram Feed Count" content="instagram-count-3" Title="3"/><meta name="select:Instagram Feed Count" content="instagram-count-9" Title="9"/><meta name="select:Instagram Feed Count" content="instagram-count-12" Title="12"/>
 
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+<meta name="select:Post Width" content="width-small" Title="Small"/>
+<meta name="select:Post Width" content="width-tiny" Title="Tiny"/>
+<meta name="select:Post Width" content="width-medium" Title="Medium"/>
+<meta name="select:Post Width" content="width-large" Title="Large"/>
+<meta name="select:Post Width" content="width-huge" Title="Huge"/>
+<meta name="select:Hover Style" content="show-1" Title="Style 1"/>
+<meta name="select:Hover Style" content="show-2" Title="Style 2"/>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-    </div>
+<meta name="text:Archive Title" content="Archive"/>
+<meta name="text:Ask Title" content="Message"/>
+<meta name="text:Disqus Shortname" content=""/>
+<meta name="text:Google Analytics ID" content=""/>
+<meta name="text:Instagram ID" content=""/>
+<meta name="text:URL Flickr" content=""/>
+<meta name="text:URL Vimeo" content=""/>
+<meta name="text:URL Twitter" content=""/>
+<meta name="text:URL Facebook" content=""/>
+<meta name="text:URL Google Plus" content=""/>
+<meta name="text:URL Pinterest" content=""/>
+<meta name="text:URL Dribble" content=""/>
+<meta name="text:URL Spotify" content=""/>
+<meta name="text:URL Instagram" content=""/>
+<meta name="text:URL Soundcloud" content=""/>
+<meta name="text:URL Behance" content=""/>
+<meta name="text:URL Linkedin" content=""/>
+<meta name="text:URL Stumbleupon" content=""/>
+<meta name="text:URL Lastfm" content=""/>
+<meta name="text:URL Github" content=""/>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Gifbooth maintained by <a href="https://github.com/curiouspeterson">curiouspeterson</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
+<meta name="description" content="{MetaDescription}"/>
 
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family={select:Body Font}:400,400italic,700,700italic">
+
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family={select:Title Font}:400,400italic,700,700italic">
+
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+
+<link rel="stylesheet" href="http://static.tumblr.com/3zmswwt/RKRmwg3k8/icon-embedded.css"/><!--[if IE 7]><link rel="stylesheet" href="http://static.tumblr.com/3zmswwt/1rsmwg3kh/icon-ie7.css"/><![endif]-->
+
+<link href='http://static.tumblr.com/3zmswwt/ZdRmwnqj6/lightbox.css' rel='stylesheet' type='text/css'>
+
+<style type="text/css">
+
+/*      Settings     */
+
+*, *:before, *:after {-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
+
+a,a:hover{
+    text-decoration:none
+    }
+
+body{
+    margin:0;
+    padding:0;
+    word-wrap:normal
+    }
+
+.entry img{
+    max-width:100%;
+    display:block
+    }
+
+h1, h2, h3, h4, h5 {
+    margin: 0 0 15px 0;
+    font:400 1em 'Helvetica Neue', "Arial", sans-serif
+    }
+
+h1{font-size:34px}
+h2{font-size:30px}
+h3{font-size:24px}
+p{line-height:1.8em}
+
+{block:IndexPage}
+h1, h2, h3{
+    font-size:20px
+    }
+{/block:IndexPage}
+
+.entry a{
+    word-wrap:break-word
+    }
+
+blockquote{
+    padding:0 0 0 15px;
+    margin:0 0 0 15px;
+    border-left:2px solid #ccc
+    }
+
+a,
+#top-bar h1,
+#top-bar span#menu-click,
+#sidebar #navigation li a span,
+#sidebar #sidebar-wrap #instagram #instagram-feed li img,
+.mfp-fade.mfp-bg,
+.mfp-fade.mfp-wrap .mfp-content,
+.entry .photo .photo-hover .overlay,
+.entry .photo .photo-hover .hover-2 .upper-captions,
+.entry .photo .photo-hover .hover-2 .lower-captions,
+.entry .text a.link,
+#pagination a{
+    -webkit-transition:all .3s ease;
+    -moz-transition:all .3s ease;
+    -o-transition:all .3s ease;
+    transition:all .3s ease
+    }
+
+#loading,
+#posts{   
+    -webkit-transition:opacity .6s linear;
+    -moz-transition:opacity .6s linear;
+    -o-transition:opacity .6s linear;
+    transition:opacity .6s linear
+    }
+
+a#install-button{
+    width:100px;
+    height:20px;
+    padding:2px 4px;
+    background:url("http://static.tumblr.com/tpqedpr/cQ1mbwb60/de.png") rgba(0,0,0,.4) no-repeat;
+    border:1px solid rgba(0,0,0,0.18);
+    -webkit-border-radius:2px;
+    -moz-border-radius:2px;
+    border-radius:2px;
+    z-index:99;
+    top:-30px;
+    right:5px;
+    position:fixed
+    }
+
+a#install-button:hover{
+    background:url("http://static.tumblr.com/tpqedpr/cQ1mbwb60/de.png") rgba(0,0,0,.32) no-repeat
+    }
+
+span#install-theme-text{
+    float:right;
+    font:12px Arial;
+    text-shadow:1px 1px 1px rgba(0,0,0,0.08);
+    color:white
+    }
+
+#tumblr_controls{
+    position:fixed;
+    margin:0 105px 0 0 !important
+    }
+
+/*      End-Setting     */
+
+/*      Sidebar     */
+
+#sidebar{
+    display:none;
+    position:fixed;
+    top:0;
+    width:290px;
+    height:100%;
+    z-index:30;
+    overflow:hidden
+    }
+
+.sidebar.left{
+    left:-260px;
+    right:auto
+    }
+
+#sidebar #sidebar-wrap{
+    position:relative;
+    width:305px;
+    height:100%;
+    padding:25px 35px 40px 30px;
+    overflow-y:scroll
+    }
+
+#sidebar #sidebar-wrap #gradient-bottom{
+    width:230px;
+    height:160px;
+    position:fixed;
+    bottom:0;
+    pointer-events:none
+    }
+
+#sidebar #sidebar-wrap img{
+    width:100%
+    }
+
+#sidebar #sidebar-wrap h1 a{
+    text-transform:uppercase;
+    letter-spacing:3px;
+    font-weight:normal;
+    font-size:23px;
+    line-height:1.7em
+    }
+
+
+#sidebar #sidebar-wrap h2{
+    text-transform:uppercase;
+    font-size:15px;
+    letter-spacing:2px
+    }
+
+#sidebar #sidebar-wrap #description,
+#sidebar #sidebar-wrap #navigation,
+#sidebar #sidebar-wrap #social,
+#sidebar #sidebar-wrap #instagram,
+#sidebar #sidebar-wrap #twitter{
+    margin:25px 0 0 0;
+    padding:25px 2px 0 2px;
+    font-size:13px
+    }
+
+#sidebar #sidebar-wrap #navigation{
+    margin:25px 0 -12px 0
+    }
+
+#sidebar #sidebar-wrap #navigation li{
+    list-style-type:none;
+    text-transform:uppercase;
+    letter-spacing:1px
+    }
+
+#sidebar #sidebar-wrap #navigation li{
+    display:block;
+    padding:0 0 16px 0
+    }
+
+#sidebar #sidebar-wrap #navigation li a{
+    display:block
+    }
+
+#sidebar #sidebar-wrap #navigation li a#extralink-click{
+    cursor:pointer
+    }
+
+#sidebar #sidebar-wrap #navigation ul{
+    display:none;
+    margin:0 0 10px -10px
+    }
+
+#sidebar #sidebar-wrap #navigation ul li{
+    padding:0 0 5px 0
+    }
+
+#sidebar #sidebar-wrap #navigation li a span{
+    float:right;
+    text-transform:lowercase;
+    font:14px/1.3em "icon"
+    }
+
+#sidebar #sidebar-wrap #navigation li:hover span{
+    margin:0 25px 0 0
+    }
+
+#sidebar #sidebar-wrap #social a{
+    margin:0 20px 0 2px;
+    font:16px/39px icon;
+    color:#fff;
+    }
+
+#sidebar #sidebar-wrap #social a:hover{
+    opacity:.5;
+    }
+
+#sidebar #sidebar-wrap #instagram #instagram-feed{
+    width:230px;
+    margin:25px 0 0 0;
+    padding:0;
+    list-style:none;
+    overflow:hidden;
+    white-space:nowrap
+    }
+
+#sidebar #sidebar-wrap #instagram #instagram-feed li {
+    float:left;
+    margin:0 5px 5px 0
+    }
+
+#sidebar #sidebar-wrap #instagram #instagram-feed li img{
+    width:70px;
+    height:70px;
+    opacity:.85
+    }
+
+#sidebar #sidebar-wrap #instagram #instagram-feed li img:hover{
+    opacity:1
+    }
+
+.instagram-count-3 #instagram #instagram-feed{height:70px}
+.instagram-count-6 #instagram #instagram-feed{height:145px}
+.instagram-count-9 #instagram #instagram-feed{height:220px}
+.instagram-count-12 #instagram #instagram-feed{height:295px}
+
+#sidebar #sidebar-wrap #twitter .content{
+    margin:0 0 10px 0;
+    opacity:.7
+    }
+
+#sidebar #sidebar-wrap #twitter .content:hover{
+    opacity:1
+    }
+
+/*      End-Sidebar     */
+
+/*      Top-bar      */
+
+#top-bar{
+    position:fixed;
+    top:-1px;
+    width:100%;
+    padding:15px 40px;
+    text-align:center;
+    z-index:20
+    }
+
+#top-bar h1{
+    display:inline;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    line-height:2em;
+    font-size:26px;
+    }
+
+#top-bar h1:hover{
+    opacity:.8
+    }
+
+#top-bar span#menu-click{
+    float:left;
+    cursor:pointer;
+    text-transform:lowercase;
+    font:27px/2em "icon";
+    opacity:.85;
+    }
+
+#top-bar span#menu-click:hover{
+    opacity:1
+    }
+
+/*      End-Top-bar     */
+
+/*      Posts       */
+
+#posts-wrapper{
+    margin:80px auto 0 auto;
+    padding:25px 0
+    }
+
+#posts{
+    margin:0 auto;
+    }
+
+.width-tiny .entry{width:260px}
+.width-tiny .big-post{width:540px}
+.width-small .entry{width:290px}
+.width-small .big-post{width:600px}
+.width-medium .entry{width:320px}
+.width-medium .big-post{width:660px}
+.width-large .entry{width:350px}
+.width-large .big-post{width:720px}
+.width-huge .entry{width:380px}
+.width-huge .big-post{width:780px}
+
+.entry .normal-width{
+    display:block
+    }
+
+.big-post .normal-width{
+    display:none
+    }
+
+.entry .larger-width{
+    display:none;
+    }
+
+.big-post .larger-width{
+    display:block
+    }
+
+/*      End-Posts       */
+
+/*      Details     */
+
+.entry{
+   width:300px;
+   margin:0 10px 20px 10px;
+   word-wrap:normal;
+   float:left;
+   }
+
+.entry .media iframe{
+    width:100%;
+    display:block
+    }
+
+.entry .text{
+    padding:20px
+    }
+
+.entry .photo img{
+    width:100%
+    }
+
+.entry .photo-post{
+    padding:0 10px
+    }
+
+.entry .photo-post .captions{
+    padding:0 10px
+    }
+
+.entry .text-post{
+    display:block !important;
+    padding:0 20px;
+    }
+
+.entry .photo-post .details{
+    display:none
+    }
+
+.entry .text-post .details{
+    padding:20px 3px
+    }
+
+.entry .details,
+.entry .details a{
+    color:#aaa;
+    line-height:24px
+    }
+
+.entry .details a{
+    margin:0 15px 0 0
+    }
+
+.entry .details .tags{
+    margin:0 0 10px 0
+    }
+
+.entry .details .buttons{
+    display:inline;
+    float:right;
+    margin:4px 0 0 0;
+    }
+
+.entry .details .buttons span{
+    display:inline-block;
+    margin:0 0 0 15px;
+    }
+
+.entry .text .odd,.entry .text .even{
+    margin:5px 0 0 0;
+    padding:10px 7px;
+    }
+
+.entry .text .odd{
+    background:#eee
+    }
+
+.entry .text a.link{
+    display:block;
+    padding:12px 15px;
+    font-size:15px;
+    color:#fff !important
+    }
+
+.entry .text a.link:hover{
+    opacity:.7
+    }
+
+.entry .text a.link span{
+    margin:0 0 0 20px;
+    font:14px/2.5em 'icon'
+    }
+
+.entry .text .question{
+    padding:0 0 15px 0
+    }
+
+.entry .text .source{
+    text-align:right
+    }
+
+.entry .photo .photo-hover{
+    position:relative;
+    overflow:hidden
+    }
+
+.entry .photo .photo-hover .overlay{
+    position:absolute;
+    width:100%;
+    height:100%;
+    opacity:0
+    }
+
+.entry .photo:hover .overlay{
+    opacity:.35
+    }
+
+.entry .photo .photo-hover a{
+    color:#eeeeee !important
+    }
+
+.show-1 .entry .photo-hover .hover-2{
+    display:none
+    }
+
+.show-2 .entry .photo-hover .hover-1{
+    display:none
+    }
+
+/*      Style 1     */
+
+.entry .photo .photo-hover .hover-1 a.like-button{
+    right:10px;
+    top:10px
+    }
+
+.entry .photo .photo-hover .hover-1 a.reblog-button{
+    right:55px;
+    top:10px
+    }
+
+.entry .photo .photo-hover .hover-1 a.permalink-button{
+    right:10px;
+    top:55px
+    }
+
+.entry .photo .photo-hover .hover-1 a.lightbox-button{
+    right:55px;
+    top:55px
+    }
+
+.entry .photo .photo-hover .hover-1 a{
+    position:absolute;
+    display:block;
+    width:40px;
+    height:40px;
+    padding:11px;
+    text-align:center;
+    font:19px/1em "icon";
+    opacity:0;
+    background:rgba(0,0,0,.65);
+    -webkit-transition:opacity .3s linear .1s;
+    -moz-transition:opacity .3s linear .1s;
+    -o-transition:opacity .3s linear .1s;
+    transition:opacity .3s linear .1s;
+    }
+
+.entry .photo .photo-hover .hover-1 a:hover{
+    background:rgba(0,0,0,.8);
+    }
+
+.entry .photo:hover .hover-1 a{
+    opacity:1
+    }
+
+/*      End-Style 1     */
+
+/*      Style 2     */
+
+.entry .photo .photo-hover .hover-2 .upper-captions,
+.entry .photo .photo-hover .hover-2 .lower-captions{
+    position:absolute;
+    width:100%;
+    padding:15px;
+    background:rgba(0,0,0,.75)
+    }
+
+.entry .photo .photo-hover .hover-2 .upper-captions:hover,
+.entry .photo .photo-hover .hover-2 .lower-captions:hover{
+    background:rgba(0,0,0,.9)
+    }
+
+.entry .photo .photo-hover .hover-2 .upper-captions{
+    top:-50px
+    }
+
+.entry .photo .photo-hover .hover-2 .lower-captions{
+    bottom:-50px
+    }
+
+.entry .photo:hover .hover-2 .upper-captions{
+    top:0
+    }
+
+.entry .photo:hover .hover-2 .lower-captions{
+    bottom:0
+    }
+
+.entry .photo .photo-hover .hover-2 .upper-captions a,
+.entry .photo .photo-hover .hover-2 .lower-captions a{
+    font:11px 'Source Sans Pro', sans-serif;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    display:block;
+    color:#fff
+    }
+
+.entry .photo .photo-hover .hover-2 .upper-captions a span,
+.entry .photo .photo-hover .hover-2 .lower-captions a span{
+    float:right;
+    font:14px/17px "icon"
+    }
+
+/*      End-Style 2     */
+
+/*      End-Details     */
+
+/*      Pagination      */
+
+#pagination{
+    padding:40px 0;
+    text-align:center;
+    }
+
+#pagination a{
+    margin:0 20px
+    }
+
+/*      End-Pagination      */
+
+/*      Permalink Page  */
+
+#permalink #posts-wrapper{
+    padding:40px 0 80px 0
+    }
+
+#permalink .entry{
+    width:700px !important;
+    margin:auto;
+    }
+
+#permalink .permalink-box{
+    width:700px;
+    margin:40px auto 0 auto;
+    padding:20px
+    }
+
+#permalink .permalink-box ol.notes{
+    margin:20px 0 0 -35px;
+    list-style-type:none
+    }
+
+#permalink .permalink-box ol.notes li.note{
+    padding:3px 0
+    }
+
+#permalink .permalink-box ol.notes li.like:after,
+#permalink .permalink-box ol.notes li.reblog:after{
+    float:right;
+    margin:-17px 0 0 0;
+    font:14px icon;
+    opacity:.5
+    }
+
+#permalink .permalink-box ol.notes li.like:after{
+    content:"z"
+    }
+
+#permalink .permalink-box ol.notes li.reblog:after{
+    content:"c"
+    }
+
+#permalink .permalink-box ol.notes img{
+    display:inline;
+    padding:0 10px 0 0
+    }
+
+/*      End-Permalink Page  */
+
+/*      Animation       */
+
+#infscr-loading{
+    position:absolute;
+    bottom:0px;
+    left:50%;
+    margin:0 0 0 -12px
+    }
+
+#loading{
+    position:absolute;
+    width:36px;
+    height:36px;
+    bottom:300px;
+    left:50%;
+    margin:0 0 0 -19px;
+    border-radius:4px;
+    z-index:100;
+    background:url('http://static.tumblr.com/j6tha7z/AFfmuponn/ajax-loader.gif') no-repeat center #fff;
+    filter:alpha(opacity = 0)
+    }
+
+#posts,
+#pagination{
+    opacity:0
+    }
+
+/*      End-Animation       */
+
+/*      Resonsive       */
+
+@media screen and (min-width:700px){
+.responsive-level-1{display:block}
+.responsive-level-2,
+.responsive-level-3{display:none}
+}
+
+
+@media screen and (max-width:700px) {
+.responsive-level-2{display:block}
+.responsive-level-3,
+.responsive-level-1{display:none}
+#permalink .entry,#permalink .permalink-box{width:500px !important}
+}
+
+@media screen and (max-width:500px) {
+.responsive-level-3{display:block}
+.responsive-level-1,
+.responsive-level-2{display:none}
+
+#top-bar{padding:10px 20px}
+#top-bar h1{font-size:20px}
+#top-bar span#menu-click{font:21px/2em "icon"}
+#posts-wrapper{margin:60px auto 0 auto}
+.entry,#permalink .permalink-box{width:300px !important}
+.entry{margin:0 auto 20px auto}
+#permalink .permalink-box{padding:20px;margin:20px auto 0 auto}
+}
+
+/*      End-Responsive      */
+
+/*      Adjustments     */
+
+body{
+    font:14px/1.6em "{select:Body Font}", san-serif;
+    color:{color:Body Text};
+    background:{color:background} url("{image:background}") {block:ifnotrepeatbackground}no-repeat center{/block:ifnotrepeatbackground};
+    {block:ifnotrepeatbackground}
+    background-size:cover
+    {/block:ifnotrepeatbackground}
+    }
+
+a,a:link,a:visited{
+    text-decoration:none;
+    color:{color:Links}
+    }
+
+a:hover{
+    color:{color:Links Hover}
+    }
+
+h1,h2,h3,h4,h5{
+    font-family:{select:Title Font}
+    }
+
+#top-bar{
+    background:{color:Top Bar};
+    box-shadow:0 1px 2px 0 rgba(0,0,0,.1);
+    -webkit-box-shadow:0 1px 2px 0 rgba(0,0,0,.1)
+    }
+
+#top-bar h1 a,#top-bar span#menu-click{
+    color:{color:Top Bar Text}
+    }
+
+#sidebar{
+    background:{color:Sidebar};
+    color:{color:Sidebar Text}
+    }
+
+#sidebar #sidebar-wrap #gradient-bottom{
+background-image:-ms-linear-gradient(top,transparent 0%,{color:Sidebar} 100%);background-image:-moz-linear-gradient(top,transparent 0%,{color:Sidebar} 100%);background-image:-o-linear-gradient(top,transparent 0%,{color:Sidebar} 100%);background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0, transparent),color-stop(1,{color:Sidebar}));background-image:-webkit-linear-gradient(top, transparent 0%, {color:Sidebar} 100%);background-image:linear-gradient(to bottom, transparent 0%, {color:Sidebar} 100%)
+    }
+
+#sidebar #sidebar-wrap h1 a{
+    color:{color:Sidebar Title}
+    }
+
+#sidebar #sidebar-wrap #navigation li a{
+    color:{color:Sidebar Links}
+    }
+
+#sidebar #sidebar-wrap #description,#sidebar #sidebar-wrap #navigation,#sidebar #sidebar-wrap #social,#sidebar #sidebar-wrap #instagram,#sidebar #sidebar-wrap #twitter{
+    border-top:1px solid {color:Sidebar Divider}
+    }
+
+#sidebar #sidebar-wrap #twitter a{
+    color:{color:Sidebar Text}
+    }
+
+.entry,.permalink-box{
+    background:{color:Post Background};
+    box-shadow:0 1px 2px 0 rgba(0,0,0,.1);
+    -webkit-box-shadow:0 1px 2px 0 rgba(0,0,0,.1);
+    }
+
+.entry .photo .photo-hover .overlay{
+    background:{color:Photo Overlay}
+    }
+
+.entry .details{
+    border-top:1px solid {color:Post Divider};
+    }
+
+.entry .details a:hover{
+    color:#777
+    }
+
+.entry .text a.link{
+    background:{color:Links}
+    }
+
+.entry .photo .photo-hover .overlay{
+    background:{color:Photo Overlay}
+    }
+
+#pagination a{
+    color:{color:Top Bar Text}
+    }
+
+#pagination a:hover,#pagination a.current{
+    color:{color:Links}
+    }
+
+{block:ifnotshowcredit}
+#tumblr_controls{margin:0!important}
+{/block:ifnotshowcredit}
+{block:ifpostrounded}
+.entry,.entry .photo,.entry .media{border-radius:4px;-webkit-border-radius:4px}
+.entry .photo img{border-radius:2px;-webkit-border-radius:2px}
+{/block:ifpostrounded}
+{block:ifphotoborder}
+.entry .photo,.entry .media{border:8px solid {color:Post Background}}
+{/block:ifphotoborder}
+{block:ifnotphotocaptions}
+.entry .photo-post{display:none}
+{/block:ifnotphotocaptions}
+{block:ifinfinitescrolling}
+#pagination{opacity:0 !important}
+{/block:ifinfinitescrolling}
+
+/*      End-Adjustment      */
+
+{CustomCSS}
+
+</style>
+
+</head>
+<body{block:Permalink} id="permalink"{/block:Permalink}>
+
+<div id="loading"></div>
+
+<a id="install-button" href="http://themes.thejenyuan.com"><span id="install-theme-text">Install Theme</span></a>
+
+<div id="sidebar" class="{select:Instagram Feed Count}">
+<div id="sidebar-wrap">
+
+    {block:ifSidebarPortraitimage}
+        <a href="/">
+        <img src="{image:Sidebar Portrait}" alt="{title}"/>
+        </a>
+    {/block:ifSidebarPortraitimage}
     
+    {block:ifnotSidebarPortraitimage}
+        <h1><a href="/">{title}</a></h1>
+    {/block:ifnotSidebarPortraitimage}
 
-  </body>
+    {block:description}
+        <div id="description">
+            {description}
+        </div>
+    {/block:description}
+
+    <div id="navigation">
+
+        {block:AskEnabled}
+            <li><a href="/ask">{text:Ask Title}<span>g</span></a></li>
+        {/block:AskEnabled}
+        {block:SubmissionsEnabled}
+            <li><a href="/submit">Submit<span>d</span></a></li>
+        {/block:SubmissionsEnabled}
+        {block:ifshowarchivelink}
+            <li><a href="/archive">{text:Archive title}<span>a</span></a></li>
+        {/block:ifshowarchivelink}
+        {block:ifshowrandomlink}
+            <li><a href="/random">Random<span>h</span></a></li>
+        {/block:ifshowrandomlink}
+        {block:ifshowrsslink}
+            <li><a href="{RSS}">RSS<span>s</span></a></li>
+        {/block:ifshowrsslink}
+        {block:ifshowextralink}
+            <li><a id="extralink-click">Link<span>v</span></a></li>
+        {/block:ifshowextralink}
+        {block:Pages}
+        <ul>
+            <li><a href="{URL}" title="{Label}">{Label}</a></li>
+        </ul>
+        {/block:Pages}
+    </div>
+
+    {block:ifshowsocialblock}
+    <div id="social">
+        {Block:ifURLTwitter}
+            <a href="{text:URL Twitter}">1</a>
+        {Block:ifURLTwitter}
+        {Block:ifURLFacebook}
+            <a href="{text:URL Facebook}">2</a>
+        {Block:ifURLFacebook}
+        {Block:ifURLVimeo}
+            <a href="{text:URL Vimeo}">3</a>
+        {Block:ifURLVimeo}
+        {Block:ifURLFlickr}
+            <a href="{text:URL Flickr}">4</a>
+        {Block:ifURLFlickr}
+        {Block:ifURLGooglePlus}
+            <a href="{text:URL Google Plus}">5</a>
+        {Block:ifURLGooglePlus}
+        {Block:ifURLPinterest}
+            <a href="{text:URL Pinterest}">6</a>
+        {Block:ifURLPinterest}
+        {Block:ifURLLinkedin}
+            <a href="{text:URL Linkedin}">7</a>
+        {Block:ifURLLinkedin}
+        {Block:ifURLDribble}
+            <a href="{text:URL Dribble}">8</a>
+        {Block:ifURLDribble}
+        {Block:ifURLStumbleupon}
+            <a href="{text:URL Stumbleupon}">9</a>
+        {Block:ifURLStumbleupon}
+        {Block:ifURLLastfm}
+            <a href="{text:URL Lastfm}">0</a>
+        {Block:ifURLLastfm}
+        {Block:ifURLSpotify}
+            <a href="{text:URL Spotify}">=</a>
+        {Block:ifURLSpotify}
+        {Block:ifURLInstagram}
+            <a href="{text:URL Instagram}">q</a>
+        {Block:ifURLInstagram}
+        {Block:ifURLBehance}
+            <a href="{text:URL Behance}">e</a>
+        {Block:ifURLBehance}
+        {Block:ifURLGithub}
+            <a href="{text:URL Github}">r</a>
+        {Block:ifURLGithub}
+        {Block:ifURLSoundcloud}
+            <a href="{text:URL Soundcloud}">t</a>
+        {Block:ifURLSoundcloud}
+    </div>
+    {/block:ifshowsocialblock}
+    
+    {block:ifinstagramid}
+    <div id="instagram">
+        <h2>Instagram Feed</h2>
+        <ul id="instagram-feed"></ul>
+    </div>
+    {/block:ifinstagramid}
+
+    {block:Twitter}
+    <div id="twitter" style="display:none">
+        <h2><a href="http://twitter.com/{TwitterUsername}">Latest Tweets</a></h2>
+        <div id="tweets"></div>
+    </div>
+    <script type="text/javascript">
+        function recent_tweets(data) {
+            for (i=0; i<5; i++) {
+                document.getElementById("tweets").innerHTML =
+                    document.getElementById("tweets").innerHTML +
+                    '<a href="http://twitter.com/{TwitterUsername}/status/' +
+                    (data[i].id_str ? data[i].id_str : data[i].id) +
+                    '"><div class="content">' + data[i].text +
+                    '</div></a>';
+            }
+            document.getElementById("twitter").style.display = 'block';
+        }
+    </script>
+    {/block:Twitter}
+
+<div id="gradient-bottom"></div>
+
+</div><!--  Sidebar-Wrap -->
+</div><!--  Sidebar -->
+
+<div id="top-bar">
+
+    <h1><a href="/">{title}</a></h1>
+
+    <span id="menu-click">\</span>
+
+</div><!--  top-bar  -->
+
+<div id="posts-wrapper">
+
+<div id="posts" class="{select:Hover Style} {select:Post Width}{block:HasTags}{block:Tags} {Tag}{/block:Tags}{/block:HasTags}">
+
+{block:Posts}
+
+<div id="{PostID}" class="entry{block:HasTags}{block:Tags} {Tag}{/block:Tags}{/block:HasTags}">
+
+{block:Answer}
+<div class="text">
+    <div class="question">
+        <h3>{Question}</h3>
+        <div class="source">Asked by {Asker}</div>
+    </div>
+    {answer}
+</div>
+{/block:Answer}
+
+{block:Chat}
+<div class="text">
+    {block:Title}<h2>{Title}</h2>{/block:Title}
+    {block:Lines}
+        <div class="{Alt} user_{UserNumber}">
+            {block:Label}<b>{Label}</b>{/block:Label} {Line}
+        </div>
+    {/block:Lines}
+</div>
+{/block:Chat}
+
+{block:Link}
+<div class="text">
+    <a class="link" href="{URL}">{Name}<span>.</span></a>
+    {block:Description}
+        {Description}
+    {/block:Description}
+</div>
+{/block:Link}
+
+{block:Text}
+<div class="text">
+    {block:Title}<h2>{Title}</h2>{/block:Title}
+    {Body}
+</div>
+{/block:Text}
+
+{block:Quote}
+<div class="text">
+    <h3>&ldquo; {Quote} &rdquo;</h3>
+    <div class="source">&mdash; &nbsp;&nbsp;&nbsp;{Source}</div>
+</div>
+{/block:Quote}
+ 
+{block:Photo}
+<div class="photo">
+{block:indexpage}
+    <div class="photo-hover">
+    <div class="overlay"></div>
+        <div class="hover-1">
+            <a class="like-button">{LikeButton size="17 color=white"}</a>
+            <a class="reblog-button" href="{Reblogurl}" target="_blank">c</a>
+            <a class="permalink-button" href="{permalink}" target="_blank">v</a>
+            <div class="photoset-grid"><a class="lightbox-button" href="{PhotoURL-HighRes}">j</a></div>
+        </div>
+        <div class="hover-2">
+            <div class="upper-captions">
+                <a href="http://{name}.tumblr.com/day/{Year}/{MonthNumberWithZero}/{DayOfMonthWithZero}">Posted {Timeago}</a>
+            </div>
+            <div class="lower-captions">
+                <a href="{permalink}">Permalink ( {NoteCountWithLabel} )<span>.</span></a>
+            </div>
+        </div>
+        <div class="larger-width">
+            <img src="{PhotoURL-HighRes}"alt="{PhotoAlt}">
+        </div>
+        <div class="normal-width">
+            <img src="{PhotoURL-500}"alt="{PhotoAlt}">
+        </div>
+    </div>
+    {/block:indexpage}
+    {block:permalinkpage}
+    {LinkOpenTag}
+        <img src="{PhotoURL-HighRes}"alt="{PhotoAlt}">
+    {LinkCloseTag}
+    {/block:permalinkpage}
+
+</div>
+{/block:Photo}
+
+{block:Photoset}
+    <div class="photo">
+        <div class="photoset-grid" data-layout="{PhotosetLayout}" data-id="photoset{PostID}">
+            {block:Photos}
+<a href="{PhotoURL-HighRes}"><img src="{PhotoURL-HighRes}"{block:HighRes}data-highres="{PhotoURL-HighRes}"{/block:HighRes}{block:Caption}alt="{Caption}"{/block:caption}/></a>
+            {/block:Photos}
+        </div>
+    </div>
+{/block:Photoset}
+ 
+{block:Audio}
+<div class="media">
+    {block:IndexPage}
+        <div class="larger-width">
+            {AudioEmbed-640}
+        </div>
+        <div class="normal-width">
+            {AudioEmbed-400}
+        </div>
+    {/block:IndexPage}
+   
+    {block:permalinkpage}
+        <div class="responsive-level-1">
+            {AudioEmbed-640}
+        </div>
+        <div class="responsive-level-2">
+            {AudioEmbed-500}
+        </div>
+        <div class="responsive-level-3">
+            {AudioEmbed-250}
+        </div>
+    {/block:permalinkpage}
+</div>
+{/block:Audio}
+ 
+{block:Video}
+<div class="media">
+    {block:IndexPage}
+        <div class="larger-width">
+            {VideoEmbed-700}
+        </div>
+        <div class="normal-width">
+            {VideoEmbed-400}
+        </div>
+    {/block:IndexPage}
+    {block:permalinkpage}
+        <div class="responsive-level-1">
+            {VideoEmbed-700}
+        </div>
+        <div class="responsive-level-2">
+            {VideoEmbed-500}
+        </div>
+        <div class="responsive-level-3">
+            {VideoEmbed-250}
+        </div>
+    {/block:permalinkpage}
+</div>
+{/block:Video}
+
+{block:date}
+<div class="{block:Answer}text-post{/block:Answer}{block:Chat}text-post{/block:Chat}{block:Link}text-post{/block:Link}{block:Text}text-post{/block:Text}{block:Quote}text-post{/block:Quote}{block:Video}text-post{/block:Video}{block:Audio}text-post{/block:Audio}{block:Photo}{block:indexpage}photo{/block:indexpage}{block:permalinkpage}text{/block:permalinkpage}-post{/block:Photo}{block:Photoset}text-post{/block:Photoset}">
+
+    {block:Caption}
+        <div class="captions">
+        {Caption}
+        </div>
+    {/block:Caption}
+
+    <div class="details">
+        
+        {block:HasTags}
+            <div class="tags">
+                {block:Tags}
+                    <a href="{TagURL}">#{Tag}</a>
+                {/block:Tags}
+            </div>        
+        {/block:HasTags}
+        
+        <a href="{permalink}">{TimeAgo}</a>
+        
+        {block:NoteCount}
+        / <a href="{permalink}">{NoteCountWithLabel}</a>
+        {/block:NoteCount}
+        
+        <div class="buttons">
+            
+            <span>{ReblogButton size="16"}</span>
+            <span>{LikeButton size="16"}</span>
+
+        </div>
+        
+    </div>
+
+</div>
+{/block:date}
+
+</div><!--      entry       -->
+ 
+{block:PermalinkPage}
+{block:date}
+
+{block:IfDisqusShortname}<div class="permalink-box"><script type="text/javascript">var disqus_url = "{Permalink}"; var disqus_title ="{block:PostTitle}{PostTitle}{/block:PostTitle}";</script><div id="disqus_thread"></div><script type="text/javascript">var disqus_identifier = {PostID};(function() {var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;dsq.src = 'http://{text:Disqus Shortname}.disqus.com/embed.js';(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);})();</script><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript={text:Disqus Shortname}">comments powered by Disqus.</a></noscript></div>{/block:IfDisqusShortname}
+
+{block:PostNotes}
+<div class="permalink-box">
+<h2>{NoteCountWithLabel}</h2>
+{PostNotes}
+</div>
+{/block:PostNotes}
+
+{/block:date}
+{/block:PermalinkPage}
+ 
+{/block:Posts}
+
+</div><!--      post        -->
+
+{block:indexpage}
+{block:Pagination}
+
+    <div id="pagination">
+
+        {block:PreviousPage}
+            <a href="{PreviousPage}">«</a>
+        {/block:PreviousPage}
+
+        {block:JumpPagination length="5"}
+
+        {block:CurrentPage}
+            <a class="current">{PageNumber}</a>
+        {/block:CurrentPage}
+
+        {block:JumpPage}
+            <a href="{URL}">{PageNumber}</a>
+        {/block:JumpPage}
+
+        {/block:JumpPagination}
+
+        {block:NextPage}
+            <a href="{NextPage}" id="nextPage">»</a>
+        {/block:NextPage}
+
+    </div>
+
+{/block:Pagination}
+{/block:indexpage}
+
+</div>
+
+<script type="text/javascript" src="http://static.tumblr.com/3zmswwt/Opemwnkmq/scripts.js"></script>
+
+<script type="text/javascript" src="http://static.tumblr.com/3zmswwt/HNCmwoa0e/addons.js"></script>
+
+<script type="text/javascript" src="/tweets.js"></script>
+
+<script>
+    myJsonpCallback = function(data)
+{
+   var numNew = 0;
+   var gifResults = data.response.total_posts;
+   //console.log(data);
+   var firstPost = $('.entry').first().attr('id');
+   console.log("firstPost " + firstPost);
+
+   for(i = 0; i < gifResults; i++){
+      
+       if (firstPost == data.response.posts[i].id) {
+           console.log('break');
+           
+           numNew = i;
+           break;
+       }
+       else {
+           //$('html').load('http://100k.ishothim.com #intro-panel');
+       }
+               
+   }
+
+   while (numNew > 0) {
+       var newPost = numNew - 1;
+       var newID = '#' + data.response.posts[newPost].id + '';
+       //var postString = 'http://gifboothtesting.tumblr.com ' + newID + '';
+       //console.log(postString);
+       //$('#posts').load(postString);
+       console.log(newID);
+
+              $.post( "http://gifboothtesting.tumblr.com", function( data ) {
+                 var newContent = $(data).find(newID);
+                 $('#posts').prepend(newContent);
+              });
+
+       console.log(i);
+       numNew--;   
+   }
+   
+       
+};
+
+var timerID = setInterval(function() {
+   
+   $.ajax({
+       type: "GET",
+           url: 'http://api.tumblr.com/v2/blog/gifboothtesting.tumblr.com/posts/',
+
+       dataType: "jsonp",
+       data: {
+           api_key : "NGMZ8KrcdM4x9IimrZzyzCbj9ns8XWHg3GBx5E774tCXGAWj2C",
+           jsonp : "myJsonpCallback"
+       }
+   });
+
+}, 3 * 1000);
+</script>
+
+<script type="text/javascript"src="http://codysherman.com/tools/infinite-scrolling/code"></script>
+
+
+</body>
 </html>
