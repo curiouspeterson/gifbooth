@@ -67,22 +67,17 @@
 				};
 
 
-   
-				   $.ajax({
-				       type: "GET",
-				           url: 'http://api.giphy.com/v1/gifs/search',
 
-				       dataType: "jsonp",
-				       data: '?q=foxadhd&api_key=dc6zaTOxFJmzC',
-							 success : function (data) {
-								 console.log(data);
-							 }
-							 
-				   });
-
-
+					 $.ajax({
+					     url: 'http://api.giphy.com/v1/gifs/search?q=foxadhd&api_key=dc6zaTOxFJmzC',
+					     type: 'GET',
+					     dataType: 'jsonp',
+					     
+					     success: function (data) {
+					      console.log(data);
+					     }
+					 });
 					 
-
 				</script>
 				
 
