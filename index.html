@@ -27,7 +27,7 @@
 
 
 				<script>
-					myJsonpCallback = function(data) {
+					jsonpcallback = function(data) {
 						var numNew = 0;
 						var gifResults = data.pagination.count;
 						console.log(data);
@@ -67,16 +67,28 @@
 				};
 
 
-
-					 $.ajax({
-					     url: 'http://api.giphy.com/v1/gifs/search?q=foxadhd&api_key=dc6zaTOxFJmzC',
-					     type: 'GET',
-					     dataType: 'jsonp',
-					     
-					     success: function (data) {
-					      console.log(data);
-					     }
-					 });
+  
+				
+					 
+					 function apiCall() {
+						 $.ajax({
+						        method: "GET",
+						        url: 'http://api.giphy.com/v1/gifs/search?q=foxadhd&api_key=dc6zaTOxFJmzC',
+						        dataType: "jsonp",
+						        jsonp: "callback",
+						        jsonpCallback: "jsonpcallback",
+						        success: function(data) {
+											console.log(data);
+						        },
+						        error: function(jqXHR, textStatus, errorThrown) {
+											console.log('error');
+						        }
+						    });
+					 }
+					 
+					 apiCall();
+					 
+					 
 					 
 				</script>
 				
