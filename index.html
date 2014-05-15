@@ -29,6 +29,7 @@
 				<script>
 					jsoncallback = function(data) {
 						var numNew = 0;
+						console.log(data);
 						var gifResults = data.pagination.count;
 						console.log(data);
 						var firstPost = $('.entry').first().attr('id');
