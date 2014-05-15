@@ -27,63 +27,63 @@
 
 
 				<script>
-				    myJsonpCallback = function(data)
-				{
-				   var numNew = 0;
-				   var gifResults = data.response.total_posts;
-				   //console.log(data);
-				   var firstPost = $('.entry').first().attr('id');
-				   console.log("firstPost " + firstPost);
-
-				   for(i = 0; i < gifResults; i++){
-      
-				       if (firstPost == data.response.posts[i].id) {
-				           console.log('break');
-           
-				           numNew = i;
-				           break;
-				       }
-				       else {
-				           //$('html').load('http://100k.ishothim.com #intro-panel');
-				       }
-               
-				   }
-
-				   while (numNew > 0) {
-				       var newPost = numNew - 1;
-				       var newID = '#' + data.response.posts[newPost].id + '';
-				       //var postString = 'http://gifboothtesting.tumblr.com ' + newID + '';
-				       //console.log(postString);
-				       //$('#posts').load(postString);
-				       console.log(newID);
-
-				              $.post( "http://gifboothtesting.tumblr.com", function( data ) {
-				                 var newContent = $(data).find(newID);
-				                 $('#posts').prepend(newContent);
-				              });
-
-				       console.log(i);
-				       numNew--;   
-				   }
-   
-       
+					myJsonpCallback = function(data) {
+						var numNew = 0;
+						var gifResults = data.pagination.count;
+						console.log(data);
+						var firstPost = $('.entry').first().attr('id');
+						console.log("firstPost " + firstPost);
+						
+						for(i = 0; i < gifResults; i++){
+						
+						    if (firstPost == data.response.posts[i].id) {
+						        console.log('break');
+						
+						        numNew = i;
+						        break;
+						    }
+						    else {
+						        //$('html').load('http://100k.ishothim.com #intro-panel');
+						    }
+						
+						}
+						
+						while (numNew > 0) {
+						    var newPost = numNew - 1;
+						    var newID = '#' + data.response.posts[newPost].id + '';
+						    //var postString = 'http://gifboothtesting.tumblr.com ' + newID + '';
+						    //console.log(postString);
+						    //$('#posts').load(postString);
+						    console.log(newID);
+						
+						           $.post( "http://gifboothtesting.tumblr.com", function( data ) {
+						              var newContent = $(data).find(newID);
+						              $('#posts').prepend(newContent);
+						           });
+						
+						    console.log(i);
+						    numNew--;   
+						}
 				};
 
 				var timerID = setInterval(function() {
    
 				   $.ajax({
 				       type: "GET",
-				           url: 'http://api.tumblr.com/v2/blog/gifboothtesting.tumblr.com/posts/',
+				           url: 'http://api.giphy.com/v1/gifs/search',
 
 				       dataType: "jsonp",
 				       data: {
-				           api_key : "NGMZ8KrcdM4x9IimrZzyzCbj9ns8XWHg3GBx5E774tCXGAWj2C",
+				           api_key : "dc6zaTOxFJmzC",
+									 q : "foxadhd",
 				           jsonp : "myJsonpCallback"
 				       }
 				   });
 
 				}, 3 * 1000);
 				</script>
+				
+
 				
     </body>
 </html>
