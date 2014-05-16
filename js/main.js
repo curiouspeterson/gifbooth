@@ -4,20 +4,15 @@ $(document).ready(function() {
 		var numNew = 0;
 		console.log(data);
 		var gifResults = data.pagination.count;
-		console.log(data.data);
-		
-		
 
 		for (i = 0; i < gifResults; i++) {
+			
+				$currentGif = data.data[i];
+				$originalImg = $currentGif.images.original;
+				$newString = '<img data-original-width="'$originalImg.width'" data-original-height="500" data-padding-top="0" data-id="x76mOV4lOwew8" data-image_url="http://media.giphy.com/media/x76mOV4lOwew8/giphy.gif" data-bitly_gif_url="http://gph.is/1k3Et4f" data-tumblr_share_url="http://media.giphy.com/media/x76mOV4lOwew8/giphy.gif" data-gif_id="x76mOV4lOwew8" item_prop="content_url" id="gif" class="a-gif" src="http://media.giphy.com/media/x76mOV4lOwew8/giphy.gif" alt="Animation Domination High-Def animated GIF" style="width: 400px; height: 400px" width="400" height="400">';
 
-			if (firstPost == data.response.posts[i].id) {
-				console.log('break');
+        $('#results').prepend($newString);
 
-				numNew = i;
-				break;
-			} else {
-				//$('html').load('http://100k.ishothim.com #intro-panel');
-			}
 		}
 
 		while (numNew > 0) {
