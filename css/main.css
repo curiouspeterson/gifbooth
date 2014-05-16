@@ -101,6 +101,9 @@ textarea {
 
 .image-container{
 	position:relative;
+	display:inline-block;
+	height:auto;
+	max-width:500px;
 }
 
 .image-container .share-hover{
