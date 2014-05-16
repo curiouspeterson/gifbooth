@@ -99,7 +99,9 @@ textarea {
 
 
 
-
+.image-container{
+	position:relative;
+}
 
 .image-container .share-hover{
 	position:absolute;
