@@ -3,7 +3,7 @@ $(document).ready(function() {
 	
 	var hash = window.location.hash.substr(1);
 	console.log(hash);
-	var searchTerm = 'pizza';
+	var searchTerm = 'foxadhd';
 	
 	if (hash) {
 		searchTerm = hash;
@@ -12,6 +12,7 @@ $(document).ready(function() {
 	var initialLoad = true;
 	var gifOffset = 0; 
 	var gifOffsetString = '&offset='+gifOffset+'';
+	var originalURL = 'http://api.giphy.com/v1/gifs/search?q='+searchTerm+'&api_key=dc6zaTOxFJmzC';
 	var apiURL = 'http://api.giphy.com/v1/gifs/search?q='+searchTerm+'&api_key=dc6zaTOxFJmzC';
 
 	jsoncallback = function(data) {
@@ -86,10 +87,12 @@ $(document).ready(function() {
         if (firstPost == data.data[i].id) {
            
             numNew = 0;
+						console.log('break');
             break;
         }
         else {
 					numNew = i;
+					console.log(numNew);
         }
                
     }
@@ -115,7 +118,7 @@ $(document).ready(function() {
    
 		$.ajax({
 			method: "GET",
-			url: apiURL,
+			url: originalURL,
 			datatype: 'json',
 			success: function(data) {
 				
