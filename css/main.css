@@ -110,6 +110,7 @@ textarea {
 	opacity: 0.0;
 	-moz-opacity: 0.0;
 		filter:alpha(opacity=00);
+		background-color: rgb(0,0,0);
 }
 
 .image-container:hover .share-hover{
