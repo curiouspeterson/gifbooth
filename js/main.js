@@ -1,5 +1,14 @@
 $(document).ready(function() {
+	
+	
+	var hash = window.location.hash.substr(1);
+	console.log(hash);
 	var searchTerm = 'pizza';
+	
+	if (hash) {
+		searchTerm = hash;
+	}
+	
 	var initialLoad = true;
 	var gifOffset = 0; 
 	var gifOffsetString = '&offset='+gifOffset+'';
@@ -77,7 +86,6 @@ $(document).ready(function() {
         if (firstPost == data.data[i].id) {
            
             numNew = 0;
-						console.log('break');
             break;
         }
         else {
@@ -107,7 +115,7 @@ $(document).ready(function() {
    
 		$.ajax({
 			method: "GET",
-			url: 'http://api.giphy.com/v1/gifs/search?q=pizza&api_key=dc6zaTOxFJmzC',
+			url: apiURL,
 			datatype: 'json',
 			success: function(data) {
 				
