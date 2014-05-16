@@ -97,6 +97,9 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+#results{
+	text-align:center;
+}
 
 
 .image-container{
@@ -104,6 +107,7 @@ textarea {
 	display:inline-block;
 	height:auto;
 	max-width:500px;
+
 }
 
 .image-container .share-hover{
@@ -122,6 +126,19 @@ textarea {
 		filter:alpha(opacity=50);
 }
 
+#pagination-container{
+	position:relative;
+	width:100%;
+}
+
+#pagination-trigger{
+	height:100px;
+	width:200px;
+	margin-left:-100;
+	left:50%;
+	background:#999;
+	position:absolute;
+}
 
 
 
