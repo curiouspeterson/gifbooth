@@ -1,13 +1,15 @@
 $(document).ready(function() {
-	
+	var searchTerm = 'pizza';
 	var initialLoad = true;
 	var gifOffset = 0; 
 	var gifOffsetString = '&offset='+gifOffset+'';
+	var apiURL = 'http://api.giphy.com/v1/gifs/search?q='+searchTerm+'&api_key=dc6zaTOxFJmzC';
 
 	jsoncallback = function(data) {
 		gifCount = data.pagination.count;
 		gifOffset = gifOffset + data.pagination.count;
 		gifOffsetString = '&offset='+gifOffset+'';
+		apiURL = 'http://api.giphy.com/v1/gifs/search?q='+searchTerm+'&api_key=dc6zaTOxFJmzC'+gifOffsetString+'';
 		var totalCount = data.pagination.total_count;
 		var numNew = 0;
 
@@ -34,7 +36,7 @@ $(document).ready(function() {
 
 	function apiCall() {
 				
-		var apiURL = 'http://api.giphy.com/v1/gifs/search?q=foxadhd&api_key=dc6zaTOxFJmzC'+gifOffsetString+'';
+		
 
 		$.ajax({
 			method: "GET",
@@ -85,11 +87,9 @@ $(document).ready(function() {
     }
 
     while (numNew > 0) {
-			console.log(numNew);
         var newPost = numNew - 1;
         var newID = '#' + data.data[newPost].id + '';
-        console.log(newID);
-				
+
 				$currentGif = data.data[numNew];
 				$originalImg = $currentGif.images.original;
 
@@ -107,7 +107,7 @@ $(document).ready(function() {
    
 		$.ajax({
 			method: "GET",
-			url: 'http://api.giphy.com/v1/gifs/search?q=funny&api_key=dc6zaTOxFJmzC',
+			url: 'http://api.giphy.com/v1/gifs/search?q=pizza&api_key=dc6zaTOxFJmzC',
 			datatype: 'json',
 			success: function(data) {
 				
