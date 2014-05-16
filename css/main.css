@@ -101,9 +101,20 @@ textarea {
 
 
 
+.image-container .share-hover{
+	position:absolute;
+	height:100%;
+	width:100%;
+	opacity: 0.0;
+	-moz-opacity: 0.0;
+		filter:alpha(opacity=00);
+}
 
-
-
+.image-container:hover .share-hover{
+	opacity: 0.5;
+	-moz-opacity: 0.5;
+		filter:alpha(opacity=50);
+}
 
 
 

@@ -9,7 +9,7 @@ $(document).ready(function() {
 			
 				$currentGif = data.data[i];
 				$originalImg = $currentGif.images.original;
-				$newString = '<img data-original-width="' + $originalImg.width +'" data-original-height="' + $originalImg.height +'" data-padding-top="0" data-id="' + $currentGif.id +'" data-image_url="' + $originalImg.url +'" data-bitly_gif_url="' + $currentGif.bitly_gif_url +'" data-tumblr_share_url="' + $originalImg.url +'" data-gif_id="' + $currentGif.id +'" item_prop="content_url" id="gif" class="a-gif" src="' + $originalImg.url +'" alt="Animation Domination High-Def animated GIF" style="width: 400px; height: 400px" width="400" height="400">';
+				$newString = '<div id="' + $currentGif.id +'-container" class="image-container"><div class="share-hover"></div><img data-original-width="' + $originalImg.width +'" data-original-height="' + $originalImg.height +'" data-padding-top="0" data-id="' + $currentGif.id +'" data-image_url="' + $originalImg.url +'" data-bitly_gif_url="' + $currentGif.bitly_gif_url +'" data-tumblr_share_url="' + $originalImg.url +'" data-gif_id="' + $currentGif.id +'" item_prop="content_url" id="gif" class="a-gif" src="' + $originalImg.url +'" alt="Animation Domination High-Def animated GIF" style="width: 400px; height: 400px" width="400" height="400"></div>';
 
         $('#results').prepend($newString);
 
